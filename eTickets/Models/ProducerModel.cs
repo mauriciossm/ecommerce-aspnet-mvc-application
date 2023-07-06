@@ -8,6 +8,11 @@ namespace eTickets.Models
         //Relationships
         public List<MovieModel> Movies { get; set; }
         
+        public ProducerModel() 
+        {
+        }
+
+
         public ProducerModel(int id, string profilePictureURL, string fullName, string bio) : base(id, profilePictureURL, fullName, bio)
         {
         }
