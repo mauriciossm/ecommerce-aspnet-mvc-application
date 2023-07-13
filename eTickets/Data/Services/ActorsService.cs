@@ -16,9 +16,10 @@ namespace eTickets.Data.Services
             _context = context;
         }
 
-        public void Add(ActorModel model)
+        public void Add(ActorModel actor)
         {
-            throw new System.NotImplementedException();
+            _context.Actors.Add(actor);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
