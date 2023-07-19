@@ -11,6 +11,6 @@ namespace eTickets.Data.Services.Interfaces
         Task<ActorModel> GetByIdAsync(int id);
         Task AddAsync(ActorModel model);
         Task<ActorModel> UpdateAsync(int id, ActorModel actorDB);
-        void Delete(int id);
+        Task DeleteAsync(int id);
     }
 }
