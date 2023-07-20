@@ -9,7 +9,7 @@ namespace eTickets.Data.Services.Interfaces
     {
         Task<IEnumerable<ActorModel>> GetAllAsync();
         Task<ActorModel> GetByIdAsync(int id);
-        Task AddAsync(ActorModel model);
+        Task AddAsync(ActorModel actor);
         Task<ActorModel> UpdateAsync(int id, ActorModel actorDB);
         Task DeleteAsync(int id);
     }
