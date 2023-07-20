@@ -8,8 +8,8 @@ namespace eTickets.Data.Base
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
-        Task AddAsync(T model);
-        Task<T> UpdateAsync(int id, T actorDB);
+        Task AddAsync(T entity);
+        Task<T> UpdateAsync(int id, T entity);
         Task DeleteAsync(int id);
     }
 }
