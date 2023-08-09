@@ -29,9 +29,8 @@ namespace eTickets.Data
         public DbSet<CinemaModel> Cinemas { get; set; }
         public DbSet<ProducerModel> Producers { get; set; }
 
-
-
-
-
+        //Orders related tables
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderItemModel> OrdersItems { get; set; }
     }
 }
