@@ -38,6 +38,26 @@ namespace eTickets.Data.Cart
             _context.SaveChanges();
         }
 
+        public void RemoveItemFromCArt(MovieModel movie)
+        {
+            var shoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n => n.Movie.Id == movie.Id &&
+            n.ShoppingCartId == ShoppingCartId);
+
+            if (shoppingCartItem != null)
+            {
+                if (shoppingCartItem.Amount > 1)
+                {
+                    shoppingCartItem.Amount--;
+                }
+                else
+                {
+                    _context.ShoppingCartItems.Remove(shoppingCartItem);
+                }
+                
+            }
+            _context.SaveChanges();
+        }
+
         public List<ShoppingCartItemModel> GetShoppingCartItems()
         {
             return ShoppingCartItems ?? (ShoppingCartItems = _context.ShoppingCartItems
