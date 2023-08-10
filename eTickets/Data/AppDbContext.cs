@@ -32,5 +32,6 @@ namespace eTickets.Data
         //Orders related tables
         public DbSet<OrderModel> Orders { get; set; }
         public DbSet<OrderItemModel> OrdersItems { get; set; }
+        public DbSet<ShoppingCartItemModel> ShoppingCartItems { get; set; }
     }
 }
